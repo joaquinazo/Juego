@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Scanner;
@@ -5,12 +6,16 @@ import java.util.Scanner;
 /**
  * Created by Juako on 31/3/16.
  */
+
+//La clase menu implementa Keylistener.
 public class Menu implements KeyListener{
     MyCanvas myCanvas;
+    int counter = 0;
 
     public Menu(MyCanvas myCanvas) {
         this.myCanvas = myCanvas;
         this.myCanvas.addKeyListener(this);
+
 
     }
 
@@ -20,10 +25,14 @@ public class Menu implements KeyListener{
 
     @Override
     public void keyTyped(KeyEvent e) {
-        if (e.getKeyChar()== 'a' ){
+      /*  if (e.getKeyChar()== 'a' ){
             myCanvas.setIESTADO_ACTUAL(MyCanvas.IESTADO_JUEGO);
         }else if (e.getKeyChar()== 'b' ){
             myCanvas.setIESTADO_ACTUAL(MyCanvas.IESTADO_MENU);
+        } */
+        if (e.getKeyChar()=='a'){
+            counter++;
+       
         }
     }
 
